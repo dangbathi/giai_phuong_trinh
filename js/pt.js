@@ -10,13 +10,17 @@ function giai_ptb2() {
     document.getElementById('c').style.display='block';
 }
 
-function closeForm(){
-    document.getElementById('ptContent').style.display='none';
-    document.getElementById('phuongtrinh').innerHTML = '';
+function clearInput(){
     document.getElementById('a').value = '';
     document.getElementById('b').value = '';
     document.getElementById('c').value = '';
+}
+
+function closeForm(){
+    document.getElementById('ptContent').style.display='none';
+    document.getElementById('phuongtrinh').innerHTML = '';
     document.getElementById('result').innerHTML = '';
+    clearInput();
 }
 
 function pt_b1() {
@@ -72,15 +76,17 @@ function pt_b2() {
                 document.getElementById('result').innerHTML = "PT có nghiệm kép X = " + (-b/(2*a));
             } else {
                 x1 = (-b + Math.sqrt(d))/(2*a);
-                x2 = (-b - Math.sqrt(d))/(2*a)
+                x2 = (-b - Math.sqrt(d))/(2*a);
                 document.getElementById('result').innerHTML = "PT có nghiệm X1 =" + " " + x1 + " và X2 = " + " " + x2;
             }
+            clearInput();
         }
+      
     }
     
 }
 
 function ptOption(){
-    document.getElementById('c').style.display='none' ? pt_b1() : pt_b2();
+    document.getElementById('c').style.display == 'none' ? pt_b1() : pt_b2()
 }
 
