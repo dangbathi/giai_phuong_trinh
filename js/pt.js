@@ -40,7 +40,7 @@ function pt_b1() {
     
         }
         else {
-            x=b/a;
+            x=-b/a;
             document.getElementById('result').innerHTML = 'Nghiệm X = ' + x;
         }
     }
@@ -64,7 +64,7 @@ function pt_b2() {
                 }
             }
             else {
-                x=c/b;
+                x=-c/b;
                 document.getElementById('result').innerHTML = 'Nghiệm X = ' + x;
             }
         }
